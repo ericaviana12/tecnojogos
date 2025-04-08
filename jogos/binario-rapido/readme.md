@@ -1,19 +1,19 @@
 # Binário Rápido
 
-**Jogo educativo sobre conversão de decimal para binário**
+**Jogo educativo sobre conversão de números decimais para binários com 8 bits**
 
 ## Descrição
-O jogador vê um número decimal e deve selecionar a representação correta em binário entre quatro opções disponíveis.
+O jogador deve escolher, entre quatro opções, qual é a representação correta em binário (com 8 bits) para o número decimal apresentado. O jogo reforça o raciocínio lógico e o entendimento do sistema binário.
 
 ## Objetivo
-Praticar e memorizar a conversão de números decimais para binários, um conceito essencial na computação e arquitetura de computadores.
+Ajudar iniciantes em TI a memorizar e entender a conversão entre decimal e binário, algo essencial na área de computação e eletrônica.
 
 ## Como jogar
 
-1. Um número decimal de 0 a 15 será exibido na tela.
-2. Quatro botões com diferentes valores binários aparecerão.
-3. Clique na opção correta que representa o número em binário.
-4. Receba o feedback imediato e clique em "Próxima" para jogar de novo.
+1. Observe o número decimal exibido no topo da tela.
+2. Escolha a alternativa que representa corretamente esse número em binário com 8 bits.
+3. Se acertar, aparece uma mensagem positiva e você pode avançar.
+4. Se errar, tente novamente até acertar.
 
 ## Tecnologias usadas
 - HTML5
