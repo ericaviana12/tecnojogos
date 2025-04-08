@@ -5,19 +5,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Binário Rápido</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Binário Rápido</h1>
-  <p>Veja o número decimal e clique na opção correta em binário:</p>
+  <header>
+    <h1>Binário Rápido</h1>
+    <p>Escolha o valor binário correto com 8 bits</p>
+  </header>
 
-  <div id="numeroDecimal"></div>
-
-  <div id="opcoes"></div>
-
-  <p id="resultado"></p>
-
-  <button onclick="proximaRodada()">Próxima</button>
+  <main>
+    <div id="question">Qual é o binário de: <span id="decimal-number">0</span>?</div>
+    <div id="options"></div>
+    <div id="feedback"></div>
+    <button id="next-btn">Próximo</button>
+  </main>
 
   <script src="script.js"></script>
 </body>
