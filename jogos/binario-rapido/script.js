@@ -1,58 +1,58 @@
 // Caminho: tecnojogos/jogos/binario-rapido/script.js
-const numeroDecimal = document.getElementById("numeroDecimal");
-const opcoes = document.getElementById("opcoes");
-const resultado = document.getElementById("resultado");
+const decimalEl = document.getElementById("decimal-number");
+const optionsEl = document.getElementById("options");
+const feedbackEl = document.getElementById("feedback");
+const nextBtn = document.getElementById("next-btn");
 
-let numeroAtual = 0;
+let currentDecimal = 0;
 
-function gerarNumeroDecimal() {
-  return Math.floor(Math.random() * 16); // 0 a 15
+function gerarNumeroAleatorio(max = 255) {
+  return Math.floor(Math.random() * (max + 1));
 }
 
-function decimalParaBinario(n) {
-  return n.toString(2).padStart(4, "0");
+function decimalParaBinario8Bits(num) {
+  return num.toString(2).padStart(8, "0");
 }
 
-function gerarOpcoes(correto) {
-  const opcoesSet = new Set([decimalParaBinario(correto)]);
-  while (opcoesSet.size < 4) {
-    const falso = gerarNumeroDecimal();
-    opcoesSet.add(decimalParaBinario(falso));
+function gerarAlternativas(correta) {
+  const alternativas = new Set();
+  alternativas.add(correta);
+
+  while (alternativas.size < 4) {
+    const fake = decimalParaBinario8Bits(gerarNumeroAleatorio());
+    alternativas.add(fake);
   }
 
-  return Array.from(opcoesSet).sort(() => Math.random() - 0.5);
+  return Array.from(alternativas).sort(() => Math.random() - 0.5);
 }
 
-function mostrarRodada() {
-  numeroAtual = gerarNumeroDecimal();
-  numeroDecimal.textContent = `Decimal: ${numeroAtual}`;
+function novaRodada() {
+  feedbackEl.textContent = "";
+  currentDecimal = gerarNumeroAleatorio();
+  const correta = decimalParaBinario8Bits(currentDecimal);
+  const alternativas = gerarAlternativas(correta);
 
-  const respostas = gerarOpcoes(numeroAtual);
-  opcoes.innerHTML = "";
+  decimalEl.textContent = currentDecimal;
+  optionsEl.innerHTML = "";
 
-  respostas.forEach(bin => {
+  alternativas.forEach(opcao => {
     const btn = document.createElement("button");
-    btn.textContent = bin;
-    btn.onclick = () => verificarResposta(bin);
-    opcoes.appendChild(btn);
+    btn.textContent = opcao;
+    btn.className = "option-btn";
+    btn.onclick = () => verificarResposta(opcao, correta);
+    optionsEl.appendChild(btn);
   });
-
-  resultado.textContent = "";
 }
 
-function verificarResposta(resposta) {
-  const binCorreto = decimalParaBinario(numeroAtual);
-  if (resposta === binCorreto) {
-    resultado.textContent = "Correto!";
-    resultado.style.color = "green";
+function verificarResposta(resposta, correta) {
+  if (resposta === correta) {
+    feedbackEl.textContent = "Correto!";
+    feedbackEl.style.color = "lightgreen";
   } else {
-    resultado.textContent = `Errado! Resposta correta: ${binCorreto}`;
-    resultado.style.color = "red";
+    feedbackEl.textContent = "Incorreto. Tente novamente!";
+    feedbackEl.style.color = "tomato";
   }
 }
 
-function proximaRodada() {
-  mostrarRodada();
-}
-
-mostrarRodada();
+nextBtn.onclick = novaRodada;
+novaRodada();
