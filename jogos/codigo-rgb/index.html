@@ -1,0 +1,28 @@
+<!-- Caminho: tecnojogos/jogos/codigo-rgb/index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Código RGB</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Código RGB</h1>
+  <p>Altere os valores de R, G e B para tentar reproduzir a cor alvo:</p>
+
+  <div id="cor-alvo"></div>
+
+  <div class="sliders">
+    <label>R: <input type="range" min="0" max="255" value="0" id="r"></label>
+    <label>G: <input type="range" min="0" max="255" value="0" id="g"></label>
+    <label>B: <input type="range" min="0" max="255" value="0" id="b"></label>
+  </div>
+
+  <div id="cor-atual"></div>
+
+  <button onclick="verificarCor()">Verificar</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

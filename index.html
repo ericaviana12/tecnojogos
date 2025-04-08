@@ -1,0 +1,37 @@
+<!-- Caminho: tecnojogos/index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tecnojogos</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#3f51b5" />
+</head>
+<body>
+  <header>
+    <h1>Tecnojogos</h1>
+    <p>Coleção de minigames educativos para iniciantes em TI</p>
+  </header>
+
+  <main>
+    <section class="jogos">
+      <a href="jogos/hexa-click/index.html">Hexa Click</a>
+      <a href="jogos/codigo-rgb/index.html">Código RGB</a>
+      <a href="jogos/binario-rapido/index.html">Binário Rápido</a>
+      <a href="jogos/monte-seu-pc/index.html">Monte Seu PC</a>
+      <a href="jogos/sistema-ou-software/index.html">Sistema ou Software?</a>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./service-worker.js')
+        .then(() => console.log("Service Worker registrado com sucesso"))
+        .catch(err => console.error("Erro ao registrar o Service Worker:", err));
+    }
+  </script>
+</body>
+</html>

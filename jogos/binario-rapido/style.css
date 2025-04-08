@@ -1,0 +1,28 @@
+/* Caminho: tecnojogos/jogos/binario-rapido/style.css */
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #eef;
+    padding: 2rem;
+  }
+  
+  #numeroDecimal {
+    font-size: 2rem;
+    margin: 1rem 0;
+    font-weight: bold;
+  }
+  
+  #opcoes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  
+  button {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  

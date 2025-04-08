@@ -1,0 +1,31 @@
+/* Caminho: tecnojogos/jogos/sistema-ou-software/style.css */
+body {
+    font-family: sans-serif;
+    background-color: #fffaf0;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .itens, .categorias {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  
+  .item, .categoria {
+    width: 150px;
+    height: 60px;
+    border: 2px dashed #666;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    line-height: 60px;
+    font-weight: bold;
+    cursor: grab;
+  }
+  
+  .categoria {
+    background-color: #f8f8ff;
+  }
+  

@@ -1,0 +1,32 @@
+<!-- Caminho: tecnojogos/jogos/monte-seu-pc/index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Monte Seu PC</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Monte Seu PC</h1>
+  <p>Arraste as peças certas para os espaços corretos.</p>
+
+  <div class="pecas">
+    <div class="peca" draggable="true" id="cpu">CPU</div>
+    <div class="peca" draggable="true" id="gpu">GPU</div>
+    <div class="peca" draggable="true" id="ram">Memória RAM</div>
+    <div class="peca" draggable="true" id="hd">HD</div>
+  </div>
+
+  <div class="slots">
+    <div class="slot" data-correto="cpu">Slot da CPU</div>
+    <div class="slot" data-correto="gpu">Slot da GPU</div>
+    <div class="slot" data-correto="ram">Slot da RAM</div>
+    <div class="slot" data-correto="hd">Slot do HD</div>
+  </div>
+
+  <p id="feedback"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>

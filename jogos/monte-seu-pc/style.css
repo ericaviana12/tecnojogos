@@ -1,0 +1,32 @@
+/* Caminho: tecnojogos/jogos/monte-seu-pc/style.css */
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #f4f8fc;
+    padding: 2rem;
+  }
+  
+  .pecas, .slots {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+  }
+  
+  .peca, .slot {
+    width: 120px;
+    height: 60px;
+    border: 2px dashed #888;
+    border-radius: 8px;
+    line-height: 60px;
+    font-weight: bold;
+    background-color: #fff;
+    cursor: grab;
+    user-select: none;
+  }
+  
+  .slot {
+    background-color: #e9ecef;
+  }
+  

@@ -1,0 +1,33 @@
+<!-- Caminho: tecnojogos/jogos/sistema-ou-software/index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sistema ou Software?</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Sistema ou Software?</h1>
+  <p>Arraste cada item para a categoria correta: <strong>Hardware</strong>, <strong>Sistema</strong> ou <strong>Software</strong>.</p>
+
+  <div class="itens">
+    <div class="item" draggable="true" id="windows">Windows</div>
+    <div class="item" draggable="true" id="teclado">Teclado</div>
+    <div class="item" draggable="true" id="linux">Linux</div>
+    <div class="item" draggable="true" id="photoshop">Photoshop</div>
+    <div class="item" draggable="true" id="mouse">Mouse</div>
+    <div class="item" draggable="true" id="navegador">Navegador</div>
+  </div>
+
+  <div class="categorias">
+    <div class="categoria" data-categoria="hardware">Hardware</div>
+    <div class="categoria" data-categoria="sistema">Sistema</div>
+    <div class="categoria" data-categoria="software">Software</div>
+  </div>
+
+  <p id="mensagem"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
